@@ -15,21 +15,45 @@
 //* ////////////////////////////////////// */
 
 import sounds from "../data/sounds.json" assert { type: "json" };
+console.log(sounds);
 
 //*1. Catch the html element with id drumkit: */
 //* ////////////////////////////////////// */
 
 const drumkit = document.getElementById("drumkit");
-drumkit.style.cssText = "background-color: black";
+// drumkit.style.cssText = "background-color: black";
 
 //*2. Write a console log for the fetched sounds so you know how the structure is and how you can use it */
-
 //* ////////////////////////////////////// */
+
+sounds.soundFiles.forEach((sound) => {
+  // Access the file and key properties of each sound file
+  console.log(sound.file);
+  console.log(sound.key);
+});
 
 //*3. Create the function with a parameter that is refering to the sound used that does the following: */
 
-//3.1. make a variable that creates a button element with .createElement
+// const row = document.createElement("row");
+// row.classList.add("row");
+// document.body.append(row);
 
+function showButtons(sounds, drumkit) {
+  sounds.forEach((sound) => {
+    const soundBtn = document.createElement("button");
+    soundBtn.classList.add("btn");
+    soundBtn.textContent = `${sound.key}`;
+    drumkit.appendChild(soundBtn);
+  });
+}
+
+showButtons(sounds);
+
+// const button = document.createElement("button");
+// button.classList.add("btn");
+// row.appendChild(button);
+
+//3.1. make a variable that creates a button element with .createElement
 // add textContent to the created buttonElement. Textcontent should be either the file name and/or key needed to be pressed
 
 //3.2. make a variables that create an audio element with .createElement

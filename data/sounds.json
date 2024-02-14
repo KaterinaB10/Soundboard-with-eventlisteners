@@ -1,7 +1,7 @@
 {
   "soundFiles": [
     {
-      "file": "pathTofile",
+      "file": "./sounds/exotic-flute-wet-detuned-loop_120bpm_A_minor.wav",
       "key": "1"
     },
     {
