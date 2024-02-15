@@ -38,7 +38,7 @@ sounds.soundFiles.forEach((sound) => {
 // row.classList.add("row");
 // document.body.append(row);
 
-function showButtons(sounds, drumkit) {
+function showButtons(sounds) {
   sounds.forEach((sound) => {
     const soundBtn = document.createElement("button");
     soundBtn.classList.add("btn");
