@@ -38,16 +38,16 @@ sounds.soundFiles.forEach((sound) => {
 // row.classList.add("row");
 // document.body.append(row);
 
-function showButtons(sounds) {
-  sounds.forEach((sound) => {
-    const soundBtn = document.createElement("button");
-    soundBtn.classList.add("btn");
-    soundBtn.textContent = `${sound.key}`;
-    drumkit.appendChild(soundBtn);
-  });
-}
+// function showButtons(sounds) {
+// sounds.forEach((sound) => {
+//   const soundBtn = document.createElement("button");
+//   soundBtn.classList.add("btn");
+//   soundBtn.textContent = `${sound.key}`;
+//   drumkit.appendChild(soundBtn);
+// });
+// }
 
-showButtons(sounds);
+// showButtons(sounds);
 
 // const button = document.createElement("button");
 // button.classList.add("btn");
