@@ -5,9 +5,6 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Itim", cursive;
-  font-weight: 400;
-  font-style: normal;
 }
 
 body {
@@ -17,8 +14,17 @@ body {
 }
 
 header {
+  margin: 0;
+  padding: 0;
   height: 10%;
   background-color: rgba(215, 192, 237, 0.742);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 #drumkit {
@@ -54,6 +60,9 @@ header {
   box-shadow: 0px 0px 3px rgb(222, 189, 255);
   background: none;
   text-align: center;
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .spaceBtn {

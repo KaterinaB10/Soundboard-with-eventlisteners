@@ -148,8 +148,8 @@ soundsSecond.forEach((sound) => {
   document.addEventListener("keydown", (e) => {
     if (e.key === sound.key) {
       button.appendChild(audio);
-      audio.currentTime = 0;
-      audio.play();
+      audio[index].currentTime = 0;
+      audio[index].play();
       // document.body.style.backgroundColor = "black";
       console.log("Clicked");
     } else {
