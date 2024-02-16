@@ -39,9 +39,33 @@ const row1 = document.querySelector(".row1");
 const row2 = document.querySelector(".row2");
 const row3 = document.querySelector(".row3");
 const row4 = document.querySelector(".row4");
+const row5 = document.querySelector(".row5");
 
 //3.1. make a variable that creates a button element with .createElement
 // add textContent to the created buttonElement. Textcontent should be either the file name and/or key needed to be pressed
+
+const spaceBtn = document.createElement("button");
+spaceBtn.classList.add("spaceBtn");
+row5.appendChild(spaceBtn);
+spaceBtn.textContent = "Press here to stop";
+
+spaceBtn.onclick = function () {
+  document.location.reload();
+};
+document.addEventListener("keydown", (e) => {
+  if (e.key === " ") {
+    document.location.reload();
+  } else {
+    console.log("None");
+  }
+});
+
+// document.location.reload();
+
+// spaceBtn.onclick = function stopSounds() {
+//   audio.pause();
+//   audio.currentTime = 0;
+// };
 
 // let button = document.createElement("button");
 // button.classList.add("btn");
@@ -209,9 +233,11 @@ soundsForth.forEach((sound) => {
 //* ///////////////////////////////////////////////////////////////////////////////////////////// */
 
 //*4. Create a function that loops over the sounds (from the data file you created). Use that function created in 3. to use the logic there to create the buttons. I prefer that you use .forEach or .map */
+// done
 
 //* ////////////////////////////////////// */
 
 //*4. Call on the function that loops over the sounds and creates the buttons */
+// done
 
 //* ////////////////////////////////////// */
