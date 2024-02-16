@@ -66,20 +66,52 @@ const row4 = document.querySelector(".row4");
 //actives when pressing a keyboard key (first parameter of the eventlistener)
 //runs a nameless function with parameter event (refering to the key pressed)
 
+// 3.3.1. inside of the eventlistner:
+
+// create a variable that refers to the key pressed
+// make a conditional logic that asks if the variable created just above is the same as the sound key that should be pressed (the key "key" in the js or JSON data you created)
+// if the conditional is true, play the audio element that you created in 3.2.
+
 sounds.forEach((sound) => {
   let button = document.createElement("button");
   button.classList.add("btn");
   button.innerText = sound.key;
   row1.appendChild(button);
 
+  const audio = new Audio(sound.file);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === sound.key) {
+      button.appendChild(audio);
+      audio.currentTime = 0;
+      audio.play();
+      // document.body.style.backgroundColor = "black";
+
+      console.log("Keydown");
+    } else {
+      console.log("None");
+    }
+  });
+
   button.addEventListener("click", () => {
-    const audio = new Audio(sound.file);
     button.appendChild(audio);
     audio.play();
-
     console.log("Clicked");
   });
 });
+
+// function stopOtherSounds() {
+//   const soundFile = audio;
+//   soundFile.pause();
+//   soundFile.currentTime = 0;
+// }
+//  button.forEach((otherButton) => {
+//    if (otherButton !== button) {
+//      const otherAudio = sound.file;
+//      otherAudio.pause();
+//      otherAudio.currentTime = 0;
+//    }
+//  });
 
 soundsSecond.forEach((sound) => {
   let button = document.createElement("button");
@@ -87,11 +119,23 @@ soundsSecond.forEach((sound) => {
   button.innerText = sound.key;
   row2.appendChild(button);
 
+  const audio = new Audio(sound.file);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === sound.key) {
+      button.appendChild(audio);
+      audio.currentTime = 0;
+      audio.play();
+      // document.body.style.backgroundColor = "black";
+      console.log("Clicked");
+    } else {
+      console.log("none");
+    }
+  });
+
   button.addEventListener("click", () => {
-    const audio = new Audio(sound.file);
     button.appendChild(audio);
     audio.play();
-
     console.log("Clicked");
   });
 });
@@ -102,11 +146,23 @@ soundsThird.forEach((sound) => {
   button.innerText = sound.key;
   row3.appendChild(button);
 
+  const audio = new Audio(sound.file);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === sound.key) {
+      button.appendChild(audio);
+      audio.currentTime = 0;
+      audio.play();
+      // document.body.style.backgroundColor = "black";
+      console.log("Clicked");
+    } else {
+      console.log("none");
+    }
+  });
+
   button.addEventListener("click", () => {
-    const audio = new Audio(sound.file);
     button.appendChild(audio);
     audio.play();
-
     console.log("Clicked");
   });
 });
@@ -117,25 +173,26 @@ soundsForth.forEach((sound) => {
   button.innerText = sound.key;
   row4.appendChild(button);
 
+  const audio = new Audio(sound.file);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === sound.key) {
+      button.appendChild(audio);
+      audio.currentTime = 0;
+      audio.play();
+      // document.body.style.backgroundColor = "black";
+      console.log("Clicked");
+    } else {
+      console.log("none");
+    }
+  });
+
   button.addEventListener("click", () => {
-    const audio = new Audio(sound.file);
     button.appendChild(audio);
     audio.play();
-
     console.log("Clicked");
   });
 });
-
-let button = document.querySelector("btn");
-// addEventListener("keydown", function()) = true;
-
-// if (button)
-
-// 3.3.1. inside of the eventlistner:
-
-// create a variable that refers to the key pressed
-// make a conditional logic that asks if the variable created just above is the same as the sound key that should be pressed (the key "key" in the js or JSON data you created)
-// if the conditional is true, play the audio element that you created in 3.2.
 
 //3.4. OPTIONAL. If you used keydown as the first parameter in the previous eventlistener, add another eventlistner to the whole page that:
 //actives when releasing a keyboard key (first parameter of the eventlistener)
