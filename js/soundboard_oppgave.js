@@ -1,11 +1,3 @@
-// const row = document.querySelectorAll(".row");
-// // row.style.cssText = "background-color: black";
-// const button = document.createElement("button");
-// button.classList.add("btn");
-// document.body.append(button);
-// button.innerHTML = {
-// }
-
 //*1. Create an external JSON or js file containing information about the sounds you want to use. Import the file in here:  */
 // import referanceWord from "the location of the file"
 // Remember:
@@ -13,56 +5,131 @@
 // to use assert {type: "json"} if using a json file
 // examples of how the structure can look is in the data folder;
 //* ////////////////////////////////////// */
+// import soundFiles from "../data/sounds.json" assert { type: "json" };
+// console.log(soundFiles);
+// const soundsArr = Object.values(soundFiles);
+// console.log(soundsArr);
 
-import sounds from "../data/sounds.json" assert { type: "json" };
+import { sounds } from "../data/sounds.js";
 console.log(sounds);
+
+import { soundsSecond } from "../data/soundsSecond.js";
+console.log(soundsSecond);
+
+import { soundsThird } from "../data/soundsThird.js";
+console.log(soundsThird);
+
+import { soundsForth } from "../data/soundsForth.js";
+console.log(soundsForth);
 
 //*1. Catch the html element with id drumkit: */
 //* ////////////////////////////////////// */
 
 const drumkit = document.getElementById("drumkit");
-// drumkit.style.cssText = "background-color: black";
 
 //*2. Write a console log for the fetched sounds so you know how the structure is and how you can use it */
 //* ////////////////////////////////////// */
 
-sounds.soundFiles.forEach((sound) => {
-  // Access the file and key properties of each sound file
-  console.log(sound.file);
-  console.log(sound.key);
-});
+console.log(sounds[0].file);
+console.log(sounds[0].key);
 
 //*3. Create the function with a parameter that is refering to the sound used that does the following: */
 
-// const row = document.createElement("row");
-// row.classList.add("row");
-// document.body.append(row);
-
-// function showButtons(sounds) {
-// sounds.forEach((sound) => {
-//   const soundBtn = document.createElement("button");
-//   soundBtn.classList.add("btn");
-//   soundBtn.textContent = `${sound.key}`;
-//   drumkit.appendChild(soundBtn);
-// });
-// }
-
-// showButtons(sounds);
-
-// const button = document.createElement("button");
-// button.classList.add("btn");
-// row.appendChild(button);
+const row1 = document.querySelector(".row1");
+const row2 = document.querySelector(".row2");
+const row3 = document.querySelector(".row3");
+const row4 = document.querySelector(".row4");
 
 //3.1. make a variable that creates a button element with .createElement
 // add textContent to the created buttonElement. Textcontent should be either the file name and/or key needed to be pressed
+
+// let button = document.createElement("button");
+// button.classList.add("btn");
+// row1.appendChild(button);
+// button.textContent = sounds[0].key;
 
 //3.2. make a variables that create an audio element with .createElement
 //the audio element that is created should have the src equal to the file source
 //the audio element that is created should have the id equal to the textcontent created in 3.1.
 
+// let audio = document.createElement("audio");
+// audio.setAttribute("autoplay", "");
+// audio.src = sounds[0].file;
+// button.appendChild(audio);
+
+// button.addEventListener("click", function () {
+//   console.log("Clicked");
+//   audio.play();
+// });
+
 //3.3. add an eventlistner to the whole page that:
 //actives when pressing a keyboard key (first parameter of the eventlistener)
 //runs a nameless function with parameter event (refering to the key pressed)
+
+sounds.forEach((sound) => {
+  let button = document.createElement("button");
+  button.classList.add("btn");
+  button.innerText = sound.key;
+  row1.appendChild(button);
+
+  button.addEventListener("click", () => {
+    const audio = new Audio(sound.file);
+    button.appendChild(audio);
+    audio.play();
+
+    console.log("Clicked");
+  });
+});
+
+soundsSecond.forEach((sound) => {
+  let button = document.createElement("button");
+  button.classList.add("btn");
+  button.innerText = sound.key;
+  row2.appendChild(button);
+
+  button.addEventListener("click", () => {
+    const audio = new Audio(sound.file);
+    button.appendChild(audio);
+    audio.play();
+
+    console.log("Clicked");
+  });
+});
+
+soundsThird.forEach((sound) => {
+  let button = document.createElement("button");
+  button.classList.add("btn");
+  button.innerText = sound.key;
+  row3.appendChild(button);
+
+  button.addEventListener("click", () => {
+    const audio = new Audio(sound.file);
+    button.appendChild(audio);
+    audio.play();
+
+    console.log("Clicked");
+  });
+});
+
+soundsForth.forEach((sound) => {
+  let button = document.createElement("button");
+  button.classList.add("btn");
+  button.innerText = sound.key;
+  row4.appendChild(button);
+
+  button.addEventListener("click", () => {
+    const audio = new Audio(sound.file);
+    button.appendChild(audio);
+    audio.play();
+
+    console.log("Clicked");
+  });
+});
+
+let button = document.querySelector("btn");
+// addEventListener("keydown", function()) = true;
+
+// if (button)
 
 // 3.3.1. inside of the eventlistner:
 
