@@ -109,6 +109,7 @@ sounds.forEach((sound) => {
       button.appendChild(audio);
       audio.currentTime = 0;
       audio.play();
+      document.body.style.backgroundImage = `url(${sound.background})`;
       // document.body.style.backgroundColor = "black";
 
       console.log("Keydown");
