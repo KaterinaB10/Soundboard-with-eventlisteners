@@ -110,8 +110,6 @@ sounds.forEach((sound) => {
       audio.currentTime = 0;
       audio.play();
       document.body.style.backgroundImage = `url(${sound.background})`;
-      // document.body.style.backgroundColor = "black";
-
       console.log("Keydown");
     } else {
       console.log("None");
@@ -121,6 +119,7 @@ sounds.forEach((sound) => {
   button.addEventListener("click", () => {
     button.appendChild(audio);
     audio.play();
+    document.body.style.backgroundImage = `url(${sound.background})`;
     console.log("Clicked");
   });
 });
@@ -151,7 +150,7 @@ soundsSecond.forEach((sound) => {
       button.appendChild(audio);
       audio.currentTime = 0;
       audio.play();
-      // document.body.style.backgroundColor = "black";
+      document.body.style.backgroundImage = `url(${sound.background})`;
       console.log("Clicked");
     } else {
       console.log("none");
@@ -161,6 +160,7 @@ soundsSecond.forEach((sound) => {
   button.addEventListener("click", () => {
     button.appendChild(audio);
     audio.play();
+    document.body.style.backgroundImage = `url(${sound.background})`;
     console.log("Clicked");
   });
 });
@@ -178,7 +178,7 @@ soundsThird.forEach((sound) => {
       button.appendChild(audio);
       audio.currentTime = 0;
       audio.play();
-      // document.body.style.backgroundColor = "black";
+      document.body.style.backgroundImage = `url(${sound.background})`;
       console.log("Clicked");
     } else {
       console.log("none");
@@ -188,6 +188,7 @@ soundsThird.forEach((sound) => {
   button.addEventListener("click", () => {
     button.appendChild(audio);
     audio.play();
+    document.body.style.backgroundImage = `url(${sound.background})`;
     console.log("Clicked");
   });
 });
@@ -205,7 +206,7 @@ soundsForth.forEach((sound) => {
       button.appendChild(audio);
       audio.currentTime = 0;
       audio.play();
-      // document.body.style.backgroundColor = "black";
+      document.body.style.backgroundImage = `url(${sound.background})`;
       console.log("Clicked");
     } else {
       console.log("none");
@@ -215,6 +216,7 @@ soundsForth.forEach((sound) => {
   button.addEventListener("click", () => {
     button.appendChild(audio);
     audio.play();
+    document.body.style.backgroundImage = `url(${sound.background})`;
     console.log("Clicked");
   });
 });
