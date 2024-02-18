@@ -96,6 +96,8 @@ document.addEventListener("keydown", (e) => {
 // make a conditional logic that asks if the variable created just above is the same as the sound key that should be pressed (the key "key" in the js or JSON data you created)
 // if the conditional is true, play the audio element that you created in 3.2.
 
+let currentAudio = null;
+
 sounds.forEach((sound) => {
   let button = document.createElement("button");
   button.classList.add("btn");
@@ -104,22 +106,37 @@ sounds.forEach((sound) => {
 
   const audio = new Audio(sound.file);
 
+  const playAudio = () => {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+    audio.play();
+    currentAudio = audio;
+    document.body.style.backgroundImage = `url(${sound.background})`;
+    console.log("Keydown");
+  };
+
   document.addEventListener("keydown", (e) => {
     if (e.key === sound.key) {
-      button.appendChild(audio);
-      audio.currentTime = 0;
-      audio.play();
-      document.body.style.backgroundImage = `url(${sound.background})`;
-      console.log("Keydown");
-    } else {
-      console.log("None");
+      playAudio();
     }
   });
 
+  // document.addEventListener("keydown", (e) => {
+  //   if (e.key === sound.key) {
+  //     button.appendChild(audio);
+  //     audio.currentTime = 0;
+  //     audio.play();
+  //     document.body.style.backgroundImage = `url(${sound.background})`;
+  //     console.log("Keydown");
+  //   } else {
+  //     console.log("None");
+  //   }
+  // });
+
   button.addEventListener("click", () => {
-    button.appendChild(audio);
-    audio.play();
-    document.body.style.backgroundImage = `url(${sound.background})`;
+    playAudio();
     console.log("Clicked");
   });
 });
@@ -145,22 +162,25 @@ soundsSecond.forEach((sound) => {
 
   const audio = new Audio(sound.file);
 
+  const playAudio = () => {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+    audio.play();
+    currentAudio = audio;
+    document.body.style.backgroundImage = `url(${sound.background})`;
+    console.log("Keydown");
+  };
+
   document.addEventListener("keydown", (e) => {
     if (e.key === sound.key) {
-      button.appendChild(audio);
-      audio.currentTime = 0;
-      audio.play();
-      document.body.style.backgroundImage = `url(${sound.background})`;
-      console.log("Clicked");
-    } else {
-      console.log("none");
+      playAudio();
     }
   });
 
   button.addEventListener("click", () => {
-    button.appendChild(audio);
-    audio.play();
-    document.body.style.backgroundImage = `url(${sound.background})`;
+    playAudio();
     console.log("Clicked");
   });
 });
@@ -173,22 +193,25 @@ soundsThird.forEach((sound) => {
 
   const audio = new Audio(sound.file);
 
+  const playAudio = () => {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+    audio.play();
+    currentAudio = audio;
+    document.body.style.backgroundImage = `url(${sound.background})`;
+    console.log("Keydown");
+  };
+
   document.addEventListener("keydown", (e) => {
     if (e.key === sound.key) {
-      button.appendChild(audio);
-      audio.currentTime = 0;
-      audio.play();
-      document.body.style.backgroundImage = `url(${sound.background})`;
-      console.log("Clicked");
-    } else {
-      console.log("none");
+      playAudio();
     }
   });
 
   button.addEventListener("click", () => {
-    button.appendChild(audio);
-    audio.play();
-    document.body.style.backgroundImage = `url(${sound.background})`;
+    playAudio();
     console.log("Clicked");
   });
 });
@@ -201,22 +224,25 @@ soundsForth.forEach((sound) => {
 
   const audio = new Audio(sound.file);
 
+  const playAudio = () => {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+    audio.play();
+    currentAudio = audio;
+    document.body.style.backgroundImage = `url(${sound.background})`;
+    console.log("Keydown");
+  };
+
   document.addEventListener("keydown", (e) => {
     if (e.key === sound.key) {
-      button.appendChild(audio);
-      audio.currentTime = 0;
-      audio.play();
-      document.body.style.backgroundImage = `url(${sound.background})`;
-      console.log("Clicked");
-    } else {
-      console.log("none");
+      playAudio();
     }
   });
 
   button.addEventListener("click", () => {
-    button.appendChild(audio);
-    audio.play();
-    document.body.style.backgroundImage = `url(${sound.background})`;
+    playAudio();
     console.log("Clicked");
   });
 });

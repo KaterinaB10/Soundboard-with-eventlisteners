@@ -36,6 +36,7 @@ footer {
 
 header {
   padding: 0.5em;
+  border-bottom: 1px solid #ca4446;
 }
 
 header h1 {
@@ -46,6 +47,7 @@ header h1 {
 
 footer {
   padding: 1.1em 0;
+  border-top: 1px solid #ca4446;
 }
 
 footer p,
