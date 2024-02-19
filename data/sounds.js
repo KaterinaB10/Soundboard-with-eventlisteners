@@ -25,7 +25,7 @@ export const sounds = [
     key: "6",
     background: "/images/disco.jpg",
   },
-  { file: "./sounds/jazz.wav", key: "7", background: "../images/quitar.jpg" },
+  { file: "./sounds/jazz.wav", key: "7", background: "/images/quitar.jpg" },
   {
     file: "./sounds/piano-classical.wav",
     key: "8",
