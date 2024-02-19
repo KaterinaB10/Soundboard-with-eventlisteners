@@ -2,11 +2,7 @@ export const sounds = [
   {
     file: "./sounds/exotic-disco.wav",
     key: "1",
-<<<<<<< HEAD
     background: "/public/images/disco.jpg",
-=======
-    background: "/images/disco.jpg",
->>>>>>> 0607e7c303e1ab467b1b1c7ef6202be6e3beb500
   },
   { file: "./sounds/jazz.wav", key: "2", background: "/images/quitar.jpg" },
   {
