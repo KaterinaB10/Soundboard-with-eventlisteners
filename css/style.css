@@ -16,7 +16,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/3d-futuristic-technology-background-with-flowing-data-waves.jpg);
+  background-image: url(../public/images/3d-futuristic-technology-background-with-flowing-data-waves.jpg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
